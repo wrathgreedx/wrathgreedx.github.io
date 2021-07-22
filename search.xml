@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>双链表求公共节点</title>
+      <link href="/%E5%8F%8C%E9%93%BE%E8%A1%A8%E6%B1%82%E5%85%B1%E5%90%8C%E5%B0%BE%E9%93%BE/"/>
+      <url>/%E5%8F%8C%E9%93%BE%E8%A1%A8%E6%B1%82%E5%85%B1%E5%90%8C%E5%B0%BE%E9%93%BE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>地址：<a href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/</a></p><p><img src="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722125149272.png"></p><p>输入两个链表，找出它们的第一个公共节点。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">        ListNode *node1 = headA;</span><br><span class="line">        ListNode *node2 = headB;</span><br><span class="line">        <span class="keyword">while</span>(node1 != <span class="literal">nullptr</span> || node2 != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(node1 == node2) <span class="keyword">break</span>;</span><br><span class="line">            node1 = node1 == <span class="literal">nullptr</span> ? headB : node1-&gt;next;</span><br><span class="line">            node2 = node2 == <span class="literal">nullptr</span> ? headA : node2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hello-world</title>
       <link href="/hello-world/"/>
       <url>/hello-world/</url>
