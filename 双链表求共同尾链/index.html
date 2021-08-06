@@ -20,16 +20,17 @@
     var CONFIG = {"hostname":"wrathgreedx.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目地址：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof&#x2F;  输入两个链表，找出它们的第一个公共节点。 代码123456789101112131415161718192021&#x2F;** * Definition for singly-linked list. * struct">
+  <meta name="description" content="题目输入两个链表，找出它们的第一个公共节点。  链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof&#x2F; 解123456789101112131415161718192021&#x2F;** * Definition for singly-linked list. * struct">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双链表求公共节点">
+<meta property="og:title" content="双链表求共同尾链">
 <meta property="og:url" content="https://wrathgreedx.github.io/%E5%8F%8C%E9%93%BE%E8%A1%A8%E6%B1%82%E5%85%B1%E5%90%8C%E5%B0%BE%E9%93%BE/index.html">
 <meta property="og:site_name" content="喵喵喵">
-<meta property="og:description" content="题目地址：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof&#x2F;  输入两个链表，找出它们的第一个公共节点。 代码123456789101112131415161718192021&#x2F;** * Definition for singly-linked list. * struct">
+<meta property="og:description" content="题目输入两个链表，找出它们的第一个公共节点。  链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof&#x2F; 解123456789101112131415161718192021&#x2F;** * Definition for singly-linked list. * struct">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722125149272.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722131047397.png">
 <meta property="article:published_time" content="2021-07-21T00:07:02.000Z">
-<meta property="article:modified_time" content="2021-07-22T05:03:33.819Z">
+<meta property="article:modified_time" content="2021-08-06T02:25:24.934Z">
 <meta property="article:author" content="exceedx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722125149272.png">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>双链表求公共节点 | 喵喵喵</title>
+  <title>双链表求共同尾链 | 喵喵喵</title>
   
 
 
@@ -198,7 +199,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          双链表求公共节点
+          双链表求共同尾链
         </h1>
 
         <div class="post-meta">
@@ -215,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-22 13:03:33" itemprop="dateModified" datetime="2021-07-22T13:03:33+08:00">2021-07-22</time>
+                <time title="修改时间：2021-08-06 10:25:24" itemprop="dateModified" datetime="2021-08-06T10:25:24+08:00">2021-08-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -242,12 +243,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>地址：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/</a></p>
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>输入两个链表，找出它们的第一个公共节点。</p>
 <p><img src="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722125149272.png"></p>
-<p>输入两个链表，找出它们的第一个公共节点。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">        ListNode *node1 = headA;</span><br><span class="line">        ListNode *node2 = headB;</span><br><span class="line">        <span class="keyword">while</span>(node1 != <span class="literal">nullptr</span> || node2 != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(node1 == node2) <span class="keyword">break</span>;</span><br><span class="line">            node1 = node1 == <span class="literal">nullptr</span> ? headB : node1-&gt;next;</span><br><span class="line">            node2 = node2 == <span class="literal">nullptr</span> ? headA : node2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/</a></p>
+<h1 id="解"><a href="#解" class="headerlink" title="解"></a>解</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">        ListNode *node1 = headA;</span><br><span class="line">        ListNode *node2 = headB;</span><br><span class="line">        <span class="keyword">while</span>(node1 != <span class="literal">nullptr</span> || node2 != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(node1 == node2) <span class="keyword">break</span>;</span><br><span class="line">            node1 = node1 == <span class="literal">nullptr</span> ? headB : node1-&gt;next;</span><br><span class="line">            node2 = node2 == <span class="literal">nullptr</span> ? headA : node2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1>
+<p>实际上题目中输入的链表的公共部分的含义是地址相同</p>
+<p>即遍历两个链表最终指针会移动到相同的地方</p>
+<p><img src="https://raw.githubusercontent.com/wrathgreedx/pics/master/image-20210722131047397.png" alt="image-20210722131047397"></p>
+<p>利用两个同时移动的指针分别遍历两个链表，遍历到链表尾就转到另一个链表的头部继续遍历</p>
+<p>这样就相当于生成了两条长度相同且尾部相同的链表，到两个指针同时指向尾部时就找到了第一个公共点</p>
+<p>如果两个指针同时指向nullptr，那么显然两个指针遍历完了两个新链表，原链表无公共部分</p>
+
     </div>
 
     
@@ -265,7 +272,10 @@
     <a href="/hello-world/" rel="prev" title="hello-world">
       <i class="fa fa-chevron-left"></i> hello-world
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/%E6%B1%8201%E7%9F%A9%E9%98%B5%E4%B8%ADk%E8%A1%8C1%E6%9C%80%E5%B0%91%E7%9A%84%E7%B4%A2%E5%BC%95/" rel="next" title="求01矩阵中k行1最少的索引">
+      求01矩阵中k行1最少的索引 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -324,7 +334,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">解</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -337,14 +347,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
